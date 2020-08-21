@@ -1,0 +1,13 @@
+Admin Module:
+
+CREATE TABLE `coronakit`.`products` ( `product_id` INT NOT NULL AUTO_INCREMENT ,  `product_name` VARCHAR(30) NOT NULL ,  `product_description` VARCHAR(50) NOT NULL , `product_price` INT NOT NULL , PRIMARY KEY  (`product_id`)) ENGINE = InnoDB;
+
+--------------------------------------------------------------------------------------------------------------------
+insert into products(product_name,product_price,product_description) values('Sanitizer', 250,'Germ protection liquid')
+insert into products(product_name,product_price,product_description) values('Shield', 350.50,'Transparent face shield')
+
+-------------------------------------------------------------------------------------------------------------------
+Customer Module:
+
+CREATE TABLE `coronakit`.`customerorderdetails` ( `id` INT NOT NULL AUTO_INCREMENT ,  `CoronaKitid` INT NOT NULL ,  `CustName` VARCHAR(30) NOT NULL ,  `CustEmail` VARCHAR(50) NOT NULL ,  `CustPhone` BIGINT(15) NOT NULL ,  `ProductId` INT NOT NULL ,  `ProductName` VARCHAR(300) NOT NULL, `ProductQuantity` INT NOT NULL ,  `ProductPurchaseAmt` INT NOT NULL ,  `CustDeliveryAddress` VARCHAR(300) NOT NULL ,    PRIMARY KEY  (`id`)) ENGINE = InnoDB;
+
